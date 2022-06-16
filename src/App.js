@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+import { setSpend } from "./store.js";
+import { useState } from 'react';
 import './App.css';
+import Home from './pages/Home';
+import Main from './pages/Main';
+import Edit from './pages/Edit';
 
 function App() {
+  let dispatch = useDispatch();
+  const localDataSpend = localStorage.getItem('totalSpend');
+  if(localDataSpend) {
+    dispatch(setSpend(parseInt(localDataSpend)));
+  }
+  let totalSpend = useSelector(state => state.totalSpend);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      
+        <BrowserRouter>
+          <Routes>
+            <Route path={`${process.env.PUBLIC_URL}/`} element={!totalSpend ? <Home /> : <Main />} />
+            <Route path='/main' element={<Main />} />
+            <Route path='/edit' element={<Edit />} />
+          </Routes>
+        </BrowserRouter>
+      
     </div>
   );
 }

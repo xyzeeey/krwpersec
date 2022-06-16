@@ -1,0 +1,117 @@
+/* Main */
+.Main {
+  text-align: center;
+  padding-top: 80px;
+  height: 100vh;
+}
+
+.title {
+  font-size: 34px;
+  margin-bottom: 14px;
+}
+
+.nowSpend {
+  color: #ff5f69;
+  font-size: 52px;
+  white-space: nowrap;
+}
+
+.nowSpend span {
+  font-size: 24px;
+}
+
+.spendSec {
+  color: #ff5f69;
+  font-size: 20px;
+  margin: 14px 0 20px;
+}
+
+.spendSecMid {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%);
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    top: 50%;
+  }
+  100%{
+    opacity: 0;
+    top: 50%;
+  }
+}
+
+.circleWrap {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-60%);
+}
+
+
+.priod {
+  color: #b1b1b1;
+  font-size: 14px;
+}
+
+.btnWrap {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.shareBtn {
+  width: 45px;
+  height: 45px;
+  background-color: #ff5f69;
+  border-radius: 50%;
+  margin-left: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+.shareBtn img {
+  width: 23px;
+  height: auto;
+  transform: translateX(1px);
+}
+
+
+@media screen and (min-width: 769px) {
+
+  .Main {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 160px;
+    width: 700px;
+    height: 100vh;
+  }
+
+  .btnWrap {
+    bottom: 200px;
+  }
+
+  .circleWrap {
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+}

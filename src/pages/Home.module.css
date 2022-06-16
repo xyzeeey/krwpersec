@@ -1,0 +1,89 @@
+.Home {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ff5f69;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.homeWrap h1 {
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.homeWrap p {
+  margin-top: 24px;
+  color: #fff;
+}
+
+.homeImg {
+  width: 70px;
+  position: absolute;
+  top: -35px;
+  right: -40px;
+  animation-name: mainAni;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes mainAni {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    top: -50px;
+  }
+  100% {
+    opacity: 0;
+    top: -50px;
+  }
+}
+
+.homeImg img {
+  width: 100%;
+  height: auto;
+}
+
+.enterBtn {
+  color: #ff5f69;
+  background-color: #fff;
+  height: 45px;
+  width: 200px;
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22.5px;
+  margin-top: 14px;
+}
+
+.enterBtn span:first-child {
+  padding: 0 10px;
+  transform: translateY(1px);
+}
+
+.next {
+  width: 11px;
+  height: 11px;
+  border-top: 2px solid #ff5f69;
+  border-right: 2px solid #ff5f69;
+  transform: rotate(45deg);
+}
+
+
+@media screen and (min-width: 769px) {
+  .homeWrap h1 {
+    font-size: 52px;
+  }
+  .enterBtn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,38 @@
+/* SetBtn */
+
+.SetBtn {
+  border-radius: 22.5px;
+  width: fit-content;
+  height: 45px;
+  padding: 0 24px;
+  background-color: #ff5f69;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.resultBtn {
+  margin-right: 12px;
+  color: #ff5f69;
+  background-color: #ffe1e5;
+}
+
+.toast::before {
+  content: "고정 지출을 추가해주세요.";
+  white-space: nowrap;
+  display: block;
+  background-color: #e6e6e6;
+  color: #000;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  padding: 10px;
+  border-radius: 6px;
+}
