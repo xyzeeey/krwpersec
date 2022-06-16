@@ -30,6 +30,7 @@ const Main = () => {
   function spendNow() {
     now = new Date();
     setMonth(now.getMonth());
+    setDate(now.getDate());
     setHourSec(now.getHours() * 3600);
     setMinSec(now.getMinutes() * 60);
     setSec(now.getSeconds());
