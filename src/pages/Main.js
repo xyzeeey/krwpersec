@@ -38,7 +38,7 @@ const Main = () => {
 
   function shareTwitter() {
     const shareUrl = "https://krwpersec.netlify.app"; // 전달할 URL / #: %23 줄바꿈: %0a
-    window.open(`https://twitter.com/intent/tweet?text=💸숨만 쉬어도 나가는 돈💸 %0a [1초 마다 ${spendPerSec.toFixed(2) == 0 ? spendPerSec.toFixed(4) : spendPerSec.toFixed(2)}원, 하루에 ${spendPerDate.toLocaleString('ko-KR', {maximumFractionDigits: 0})}원] %0a 내 결과 확인하기 🤑 ${shareUrl} %0a%0a%23숨만쉬어도`);
+    window.open(`https://twitter.com/intent/tweet?text=💸숨만 쉬어도 나가는 돈💸 %0a [1초 마다 ${spendPerSec.toFixed(2) == 0 ? spendPerSec.toFixed(4) : spendPerSec.toFixed(2)}원, 하루에 ${spendPerDate.toLocaleString('ko-KR', {maximumFractionDigits: 0})}원] %0a%0a 내 결과 확인하기 🤑 ${shareUrl} %0a%0a%23숨만쉬어도나가는돈`);
   }
 
   useEffect(() => {

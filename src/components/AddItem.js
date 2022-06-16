@@ -16,7 +16,7 @@ const AddItem = () => {
   useEffect(()=>{
     const toastTimer = setTimeout(() => {
       setToastShown(current => false);
-    }, 1000);
+    }, 2000);
     return () => clearTimeout(toastTimer);
   },[toastShown])
   

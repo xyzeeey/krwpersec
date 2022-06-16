@@ -76,11 +76,15 @@
   color: #ff5f69;
   transform: translateX(-50%) translateY(-50%);
   animation-name: fadeOut;
-  animation-duration: 1000ms;
+  animation-duration: 2000ms;
+  opacity: 0;
 }
 
 @keyframes fadeOut {
   0% {
+    opacity: 0;
+  }
+  20% {
     opacity: 1;
   }
   100% {

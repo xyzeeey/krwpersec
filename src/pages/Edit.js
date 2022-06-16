@@ -39,7 +39,7 @@ const Edit = () => {
   useEffect(()=>{
     const toastTimer = setTimeout(() => {
       setToastShown(current => false);
-    }, 1000);
+    }, 2000);
     return () => clearTimeout(toastTimer);
   },[toastShown])
 
@@ -60,7 +60,7 @@ const Edit = () => {
       { toastShown ? <div className={styles.toastMsg}>고정 지출을 추가해주세요</div> : null }
       <div className={styles.btnWrap}>
         <Link to={!totalSpend ? "#" : "/main"}>
-          <SetBtn styleName="resultBtn" text="결과 확인하기" onClick={!totalSpend ? toastMsg : null}/>
+          <SetBtn styleName="resultBtn" text="결과 확인하기" onClick={!totalSpend && toastShown == false ? toastMsg : null}/>
         </Link>
         <SetBtn text="고정 지출 추가하기" onClick={onAddItem} />
       </div>
