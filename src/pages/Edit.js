@@ -39,7 +39,7 @@ const Edit = () => {
   useEffect(()=>{
     const toastTimer = setTimeout(() => {
       setToastShown(current => false);
-    }, 500);
+    }, 1000);
     return () => clearTimeout(toastTimer);
   },[toastShown])
 

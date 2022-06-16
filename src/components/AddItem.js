@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addItem, addPrice } from "./../store.js";
 import styles from "./AddItem.module.css";
@@ -11,6 +11,14 @@ const AddItem = () => {
   const [inputName, setInputName] = useState("");
   const [inputPrice, setInputPrice] = useState("");
   const [isWarn, setIsWarn] = useState("#000");
+  const [toastShown, setToastShown] = useState(false);
+
+  useEffect(()=>{
+    const toastTimer = setTimeout(() => {
+      setToastShown(current => false);
+    }, 1000);
+    return () => clearTimeout(toastTimer);
+  },[toastShown])
   
   function nameChange(e) {
     setInputName(e.target.value);
@@ -30,6 +38,7 @@ const AddItem = () => {
     let item = {id: Date.now(), item: inputName, price: inputPrice};
     dispatch(addItem(item));
     dispatch(addPrice(item.price));
+    setToastShown(current => true);
     setInputName("");
     setInputPrice("");
     setIsWarn("#000");
@@ -70,6 +79,7 @@ const AddItem = () => {
         <p className={styles.valiText} style={{color: isWarn}}>1,000원 이상 100,000,000원 이하</p>
         <button className={styles.addBtn}>추가하기</button>
       </form>
+      { toastShown ? <div className={styles.toastMsg}>추가 완료</div> : null }
     </div>
   )
 }
