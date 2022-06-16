@@ -19,37 +19,16 @@
 }
 
 .homeWrap p {
-  margin-top: 24px;
+  margin-top: 30px;
   color: #fff;
 }
 
-.homeImg {
-  width: 70px;
-  position: absolute;
-  top: -35px;
-  right: -40px;
-  animation-name: mainAni;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes mainAni {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-    top: -50px;
-  }
-  100% {
-    opacity: 0;
-    top: -50px;
-  }
-}
-
-.homeImg img {
-  width: 100%;
-  height: auto;
+.circleWrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
 }
 
 .enterBtn {

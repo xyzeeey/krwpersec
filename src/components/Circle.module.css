@@ -18,6 +18,10 @@
   animation-timing-function: ease-in-out;
 }
 
+.white {
+  background-color: #fff;
+}
+
 .circleElem:nth-child(1) {
   transform-origin: 50% 75%;
 }
