@@ -1,8 +1,8 @@
 import styles from "./SetBtn.module.css";
 
-const SetBtn = ({ text, style, bgcolor, onClick }) => {
+const SetBtn = ({ text, styleName, bgcolor, onClick }) => {
   return (
-    <div className={[styles.SetBtn, styles[style]].join(" ")} onClick={onClick} style={{backgroundColor: bgcolor}}>
+    <div className={[styles.SetBtn, styles[styleName]].join(" ")} onClick={onClick} style={{backgroundColor: bgcolor}}>
       <div>{text}</div>
     </div>
   )

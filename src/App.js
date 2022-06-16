@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { setSpend } from "./store.js";
-import { useState } from 'react';
 import './App.css';
 import Home from './pages/Home';
 import Main from './pages/Main';

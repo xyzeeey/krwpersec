@@ -37,8 +37,8 @@ const Main = () => {
   }
 
   function shareTwitter() {
-    const shareUrl = ""; // 전달할 URL / #: %23 줄바꿈: %0a
-    window.open(`https://twitter.com/intent/tweet?text=💸숨만 쉬어도 나가는 돈💸 %0a [1초 마다 ${spendPerSec.toFixed(2) == 0 ? spendPerSec.toFixed(4) : spendPerSec.toFixed(2)}원, 하루에 ${spendPerDate.toLocaleString('ko-KR', {maximumFractionDigits: 0})}원] %0a 내 결과 확인하기 %0a%0a%23숨만쉬어도`);
+    const shareUrl = "https://krwpersec.netlify.app"; // 전달할 URL / #: %23 줄바꿈: %0a
+    window.open(`https://twitter.com/intent/tweet?text=💸숨만 쉬어도 나가는 돈💸 %0a [1초 마다 ${spendPerSec.toFixed(2) == 0 ? spendPerSec.toFixed(4) : spendPerSec.toFixed(2)}원, 하루에 ${spendPerDate.toLocaleString('ko-KR', {maximumFractionDigits: 0})}원] %0a 내 결과 확인하기 🤑 ${shareUrl} %0a%0a%23숨만쉬어도`);
   }
 
   useEffect(() => {
@@ -59,7 +59,7 @@ const Main = () => {
       </div>
       <div className={styles.btnWrap}>
         <Link to="/edit"><SetBtn text="한달 고정 지출비 설정하기" /></Link>
-        <div className={styles.shareBtn} onClick={shareTwitter}><img src={process.env.PUBLIC_URL + `/assets/twitter.png`} /></div>
+        <div className={styles.shareBtn} onClick={shareTwitter}><img src={process.env.PUBLIC_URL + `/assets/twitter.png`} alt="twitter" /></div>
       </div>
     </div>
   );
